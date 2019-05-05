@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sample_ios_quiz_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="sample_ios_quiz_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +25,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sch-da-MAU">
-                                <rect key="frame" x="116" y="287" width="89" height="48"/>
+                                <rect key="frame" x="84" y="284" width="153" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="START">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -37,23 +37,24 @@
                         </subviews>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.72549019607843135" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sch-da-MAU" secondAttribute="bottom" constant="233" id="2nA-Co-Gdc"/>
                             <constraint firstItem="69x-Vf-4A7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="BrJ-GK-k78"/>
-                            <constraint firstItem="sch-da-MAU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="EWD-Pc-S5C"/>
-                            <constraint firstItem="69x-Vf-4A7" firstAttribute="centerX" secondItem="sch-da-MAU" secondAttribute="centerX" id="UlA-ty-3kH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sch-da-MAU" secondAttribute="bottom" constant="236" id="Fbd-Ra-yXq"/>
                             <constraint firstItem="69x-Vf-4A7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dTA-CO-D8o"/>
                             <constraint firstItem="69x-Vf-4A7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="111" id="jbE-tX-ec2"/>
+                            <constraint firstItem="sch-da-MAU" firstAttribute="centerX" secondItem="69x-Vf-4A7" secondAttribute="centerX" id="lb2-ML-tBN"/>
+                            <constraint firstItem="sch-da-MAU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="84" id="qrI-Wv-74k"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="682.5" y="32.74647887323944"/>
         </scene>
-        <!--View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="uwO-rq-f7Y">
             <objects>
-                <viewController storyboardIdentifier="question" id="jpy-W4-OGz" customClass="ViewController" customModule="sample_ios_quiz_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="question" id="jpy-W4-OGz" customClass="QuestionViewController" customModule="sample_ios_quiz_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="szi-sf-lhg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,6 +89,9 @@
                                         <state key="normal" title="aaa">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapAnswer1Button:" destination="jpy-W4-OGz" eventType="touchUpInside" id="Xmx-05-Ah0"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zu-Ej-QiM">
                                         <rect key="frame" x="0.0" y="81" width="288" height="71"/>
@@ -97,6 +101,9 @@
                                         <state key="normal" title="bbb">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapAnswer2Button:" destination="jpy-W4-OGz" eventType="touchUpInside" id="QwZ-Xd-xbE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0e-vy-MAS">
                                         <rect key="frame" x="0.0" y="162" width="288" height="71"/>
@@ -106,6 +113,9 @@
                                         <state key="normal" title="ccc">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapAnswer3Button:" destination="jpy-W4-OGz" eventType="touchUpInside" id="BNn-HD-hIP"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PxE-Jb-BrF">
                                         <rect key="frame" x="0.0" y="243" width="288" height="71"/>
@@ -115,6 +125,9 @@
                                         <state key="normal" title="ddd">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapAnswer4Button:" destination="jpy-W4-OGz" eventType="touchUpInside" id="GHg-Rf-13O"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -144,15 +157,25 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tno-iA-TwS"/>
                     </view>
+                    <connections>
+                        <outlet property="answer1Button" destination="4D5-kg-V2U" id="t0u-ru-FMR"/>
+                        <outlet property="answer2Button" destination="1zu-Ej-QiM" id="fXd-Up-BqC"/>
+                        <outlet property="answer3Button" destination="c0e-vy-MAS" id="L61-t6-eK1"/>
+                        <outlet property="answer4Button" destination="PxE-Jb-BrF" id="r9Y-Ib-XgQ"/>
+                        <outlet property="correctImageView" destination="6eQ-I4-Dd9" id="7eY-YT-beY"/>
+                        <outlet property="incorrectImageView" destination="qY4-KA-gVG" id="M8q-gi-6YU"/>
+                        <outlet property="questionNoLabel" destination="wTI-S4-Avj" id="yHY-by-Jlf"/>
+                        <outlet property="questionTextView" destination="1uK-a5-Dzb" id="FKG-Ay-br9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIS-vL-882" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1410" y="39"/>
+            <point key="canvasLocation" x="851" y="33"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="cbW-md-PCk">
             <objects>
-                <viewController storyboardIdentifier="result" id="yr7-kJ-nSq" customClass="ViewController" customModule="sample_ios_quiz_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="result" id="yr7-kJ-nSq" customClass="ResultViewController" customModule="sample_ios_quiz_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5O7-5B-XL7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -186,6 +209,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="タイトルへ戻る"/>
+                                <connections>
+                                    <segue destination="MvI-NV-I6o" kind="unwind" unwindAction="goToTigle:" id="SKr-Jv-Wu9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.72549019609999998" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -200,10 +226,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kDd-co-boZ"/>
                     </view>
+                    <connections>
+                        <outlet property="correctPercentLabel" destination="j9h-TC-19d" id="ELY-Zb-5Hv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6K4-OU-KYn" sceneMemberID="firstResponder"/>
+                <exit id="MvI-NV-I6o" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="39"/>
+            <point key="canvasLocation" x="1613" y="33"/>
         </scene>
     </scenes>
     <resources>
